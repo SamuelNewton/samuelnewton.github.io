@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  height: 100%;
+  width: 100%;
+
+}
+
+
+
+h1 {
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+}
+
+
+
+
+
+
+/** ------ Classes -------- **/
+
+.info {
+  margin-top: 50px;
+  margin-left: auto;
+  position: relative;
+  text-align: center;
+}
+
+.icons .fa{
+  padding: 0 20px;
+  color: black;
+}
+
+
+
+.me {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.circle
+{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin: 4px 7px 1px 0px;
+    float: left;
+}
+
+.red
+{
+    background-color: #FC605C;
+    border: solid 1px #E14946;
+}
+
+.yellow
+{
+    background-color: #FDBC40;
+    border: solid 1px #E0A234;
+}
+
+.green
+{
+    background-color: #34C749;
+    border: solid 1px #27AD36;
+}
+
+.input { color: #C7C7C7; }
+.string { color: #FFF1B7; }
+
+#terminal-titlebar
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color: #E3E3E3;
+    border-radius: 4px 4px 0px 0px;
+    padding: 1px 9px 0px 6px;
+    height: 18px;
+}
+
+#terminal
+{
+    font-size: 14px;
+    background-color: #333333;
+    color: #CCCCCC;
+    font-family: "Ubuntu Mono", monospace;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    border-radius: 0px 0px 4px 4px;
+    line-height: 100%;
+}
+
+
+#terminal a
+{
+    color: #DDFFFF;
+}
+
+#terminal a:hover
+{
+    text-decoration: underline;
+}
+
+
+.terminalwhole {
+  z-index: 1001;
+  margin: 46px auto;
+}
+
+@media only screen and (min-width: 641px) {
+
+  .terminalwhole {
+    max-width: 80%;
+  }
+
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+  body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100vh;
+    grid-template-areas: "info terminal"
+
+
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .info {
+    grid-area: info;
+    margin-top: 30vh;
+  }
+
+  .terminalwhole {
+    grid-area: terminal;
+    max-width: 90%;
+    margin-top: 30vh;
+    margin-left: 0;
+  }
+
+  .me {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+}
